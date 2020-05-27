@@ -9,9 +9,7 @@ var citiesArray = JSON.parse(localStorage.getItem("cities")) || [];
 
 const m = moment();
 
-/////
-// ON LOAD
-/////
+// initialization 
 
 $(document).ready(function() {
 	var city = citiesArray[citiesArray.length - 1];
@@ -50,8 +48,7 @@ function citySearch(city) {
 		console.log(dateInfo);
 		var currentDate = moment.unix(dateInfo).format("L");
 		console.log("current date" + currentDate);
-		//   * Icon image (visual representation of weather conditions)
-		// Where are we pulling the icons from and how
+		//   * Icon image 
 		var iconDummy = "https://openweathermap.org/img/wn/";
 		var iconPng = "@2x.png";
 		var iconWeather = response.weather[0].icon;
@@ -97,13 +94,8 @@ function citySearch(city) {
 	});
 }
 
-/////
-// * Create multiple functions within your application to
-// handle the different parts of the dashboard:
-// * UV index
-/////
 
-// // RECIEVES LAT/LON
+// // RECIEVES LAT/LON  & UV
 
 function uvIndex(lon, lat) {
 	// SEARCHES
@@ -144,15 +136,7 @@ function uvIndex(lon, lat) {
 	});
 }
 
-/////
-// RENDER BUTTONS CREATES NEW BUTTONS EACH TIME A CITY IS
-// SEARCHED FOR, AND ASSIGNS INFORMATION TO THE BUTTONS.
-// HOWEVER, IT PRINTS THEM SIDE BY SIDE CURRENTLY,
-// SHOULD WE USE A LIST CARD GROUP TO CREATE THE TOP
-// TO BOTTOM LOOK?
-/////
-
-// RenderButtons creates the buttons of past
+//  Render Buttons creates a list of buttons of the last cities searched
 
 function renderButtons() {
 	// empties the list of cities
@@ -186,7 +170,7 @@ function renderButtons() {
 	});
 }
 
-// 5-Day Forecast 
+// 5-Day Forecast function
 
 function fiveDay(city) {
 	var fiveFront = "https://api.openweathermap.org/data/2.5/forecast?q=";
@@ -385,9 +369,7 @@ function humidityAvg(x, y, z) {
 	return avgHum.toFixed(0);
 }
 
-/////
-// EVENTS
-/////
+// events
 
 $("#add-city").on("click", function(event) {
 	event.preventDefault();
@@ -397,7 +379,7 @@ $("#add-city").on("click", function(event) {
 		.val()
 		.trim();
 
-	//push new city into the Array
+	//push new city into the array
 	var containsCity = false;
 
 	if (citiesArray != null) {
