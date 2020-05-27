@@ -6,40 +6,41 @@ p {
 }
 
 body {
-	background-color: #efefe8ff;
+	background-color: #ABB2B9;
 }
 
 .jumbotron {
-	background-color: lightseagreen;
+	background-color:#CEC0D6;
 }
 
 .r2a {
-	border: 1px solid lightseagreen;
+	border: 1px solid #CEC0D6;
 	border-radius: 0.25rem;
 	padding-left: 1rem;
 }
 
 .btn-primary {
-	background-color: lightseagreen;
+    background-color: #CEC0D6;
+    height: 4px;
 }
 
 #buttons-view,
 #city-input {
 	margin-top: 1rem;
-	border: 1px solid lightseagreen;
+	border: 1px solid #CEC0D6;
 	border-radius: 0.25rem;
 }
 
 .list-group-item {
-	background-color: #efefe8ff;
+	background-color: #ABB2B9;
 }
 
 .card {
-	background-color: lightseagreen;
+	background-color: #CEC0D6;
 }
 
 .card-body {
-	padding: 0.35rem;
+	padding: 0.25rem;
 }
 
 .uvGreen {
